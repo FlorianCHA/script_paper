@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 434 of /gs7k1/home/charriat/data_flo/Script/Cluster/Annotation_only/annotation_pipeline.snake:
+Missing input files for rule recuperation_Stat:
+/homedir/charriat/work/MagMax/2_Annotation/MagMax2/pipeline_output/

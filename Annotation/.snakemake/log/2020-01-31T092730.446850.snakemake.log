@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in line 402 of /gs7k1/home/charriat/data_flo/Script/Cluster/Annotation_only/annotation_pipeline.snake:
+Wildcards in input files cannot be determined from output files:
+'smp'

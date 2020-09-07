@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Annotation pipeline &mdash; Maize paper script</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pangenome analysis" href="Pangenome.html" />
+    <link rel="prev" title="Secretome Selection" href="Secretome.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Maize_paper
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Assembly Script</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Assembly.html">Assembly Script</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Assembly.html#abyss-launch">ABYSS_launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Assembly.html#formatfastaname">formatFastaName</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Secretome Selection</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Secretome.html">Secretome Selection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Secretome.html#secretome-pipeline">Secretome_Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Secretome.html#comparaison-secretome">Comparaison_secretome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Secretome.html#eliminateremotif">EliminateREmotif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Secretome.html#selectiontmhmm">SelectionTMHMM</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Annotation pipeline</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Annotation pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mandatory-installation">Mandatory installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prepare-config-file">Prepare config file</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Pangenome analysis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Pangenome.html">Pangenome analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pangenome.html#phylogenetic">Phylogenetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pangenome.html#correction-blast">Correction_blast</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Maize_paper</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Annotation pipeline</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Annotation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="annotation-pipeline">
+<h1>Annotation pipeline<a class="headerlink" href="#annotation-pipeline" title="Permalink to this headline">¶</a></h1>
+<p>This Annotation pipeline is an automatic structural annotation workflows written in snakemake. The annotation is based on two tools which uses RNA-Seq and/or protein homology information for predict coding sequence. One of this tools is BRAKER [ref &amp; lien] which use GeneMark-EX [ref] and AUGUSTUS [ref]. And the other tool is Augustus [ref] alone for improve annotation of small coding sequences with few or no intron.</p>
+<a class="reference external image-reference" href="image/schema_pipeline.jpg"><img alt="global" class="align-center" src="_images/schema_pipeline.jpg" style="width: 300px;" /></a>
+<div class="section" id="mandatory-installation">
+<h2>Mandatory installation<a class="headerlink" href="#mandatory-installation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ccb.jhu.edu/software/hisat2/manual.shtml#obtaining-hisat2">Hisat2</a></p></li>
+<li><p><a class="reference external" href="https://github.com/samtools/samtools">samtools</a></p></li>
+<li><p><a class="reference external" href="https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate">exonerate</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Gaius-Augustus/BRAKER">BRAKER</a></p></li>
+<li><p><a class="reference external" href="https://gitlab.com/ezlab/busco/-/tree/master">BUSCO</a></p></li>
+<li><p><a class="reference external" href="https://cran.r-project.org/bin/linux/ubuntu/README.html">R</a> &amp; <a class="reference external" href="https://rmarkdown.rstudio.com/lesson-1.html">Rmarckdown package</a>**</p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python &gt;=3.7</a></p></li>
+<li><p><a class="reference external" href="https://snakemake.readthedocs.io/en/stable/">Snakemake &gt;= 5.2</a></p></li>
+</ul>
+</div>
+<div class="section" id="prepare-config-file">
+<h2>Prepare config file<a class="headerlink" href="#prepare-config-file" title="Permalink to this headline">¶</a></h2>
+<p>To run the workflows you have to provide the data path for all input file. Please complete the config.yaml file for launch the workflow.</p>
+<div class="section" id="providing-data">
+<h3>1. Providing data<a class="headerlink" href="#providing-data" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+        <span class="s2">&quot;datadir&quot;</span>   <span class="p">:</span> <span class="s2">&quot;/homedir/user/work/Masked_assembly/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;OutDir&quot;</span>    <span class="p">:</span> <span class="s2">&quot;/homedir/user/work/pipeline_output/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;RnaSeqDir&quot;</span> <span class="p">:</span> <span class="s2">&quot;/homedir/user/work//rnaseq/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_souche&quot;</span> <span class="p">:</span> <span class="s2">&quot;magnaporthe_oryzae&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;protRef&quot;</span>   <span class="p">:</span> <span class="s2">&quot;/homedir/user/work/Annotation_pipeline/SupplementaryFile/OG_filter.fasta&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>datadir</strong> : Path of you directory which contain all your fasta file to annotate.</p></li>
+<li><p><strong>RnaSeqDir</strong> : Path of the directory which contain all RNAseq data,</p></li>
+<li><p><strong>id_souche</strong> : ID of species for augustus trainings, please refers to augustus main page for this option</p></li>
+<li><p><strong>protRef</strong> :  Path of the protein fasta file.</p></li>
+<li><p><strong>OutDir</strong> : Output directory for all results of this pipeline</p></li>
+</ul>
+</div>
+<div class="section" id="launching-on-a-single-machine">
+<h3>Launching on a single machine<a class="headerlink" href="#launching-on-a-single-machine" title="Permalink to this headline">¶</a></h3>
+<p>To launch this annotation pipeline on a single machine, please use the command :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snakemake</span> <span class="o">-</span><span class="n">s</span> <span class="n">annotation_pipeline</span><span class="o">.</span><span class="n">snake</span> <span class="o">--</span><span class="n">latency</span><span class="o">-</span><span class="n">wait</span> <span class="mi">555555</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="launching-on-hpc-clusters">
+<h3>2. Launching on HPC clusters<a class="headerlink" href="#launching-on-hpc-clusters" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="preparing-cluster-configuration-using-cluster-config-yaml">
+<h4>Preparing cluster configuration using cluster_config.yaml<a class="headerlink" href="#preparing-cluster-configuration-using-cluster-config-yaml" title="Permalink to this headline">¶</a></h4>
+<p>On cluster_config.yaml, you can add partition, memory and to be used by default for each rule. This pipeline is used on cirad HPC [link], so the environment (module load command) and sge submission works only on the cirad cluster. Please adapt the content of this file before running on a cluster with your cluster parameters or if you need more memory for a rules.</p>
+<p>Here is a example of the configuration file we used on the Cirad HPC.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">__default__</span><span class="p">:</span>
+  <span class="n">n_cpu</span><span class="p">:</span> <span class="s2">&quot;-pe parallel_smp&quot;</span>
+  <span class="n">mem</span><span class="p">:</span> <span class="s2">&quot;-l mem_free=4G&quot;</span>
+  <span class="n">export_env</span><span class="p">:</span> <span class="s2">&quot;-V&quot;</span>
+  <span class="n">cwd</span><span class="p">:</span> <span class="s2">&quot;-cwd&quot;</span>
+  <span class="n">logerror</span><span class="p">:</span> <span class="s2">&quot;-e &quot;</span>
+  <span class="n">log</span><span class="p">:</span> <span class="s2">&quot;-o &quot;</span>
+  <span class="n">queue</span><span class="p">:</span> <span class="s2">&quot; -q long.q&quot;</span>
+  <span class="n">scheduler</span><span class="p">:</span> <span class="s2">&quot;qsub&quot;</span>
+
+<span class="c1">###### Cluster parameters for hisat2_index rules ########</span>
+<span class="n">hisat2_index</span> <span class="p">:</span>
+  <span class="n">mem</span><span class="p">:</span> <span class="s2">&quot;-l mem_free=4G&quot;</span>
+  <span class="n">queue</span><span class="p">:</span> <span class="s2">&quot; -q normal.q&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="launch-workflows">
+<h4>Launch workflows<a class="headerlink" href="#launch-workflows" title="Permalink to this headline">¶</a></h4>
+<p>For launch the pipeline in a cluster please use the <strong>Launcher.sh</strong> give in the directory.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Pangenome.html" class="btn btn-neutral float-right" title="Pangenome analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Secretome.html" class="btn btn-neutral float-left" title="Secretome Selection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019-2020, Florian CHARRIAT (INRAE)
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXXXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

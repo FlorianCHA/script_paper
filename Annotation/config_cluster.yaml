@@ -1,0 +1,88 @@
+__default__:
+  n_cpu: "-pe parallel_smp"
+  mem: "-l mem_free=4G"
+  export_env: "-V"
+  cwd: "-cwd"
+  logerror: "-e "
+  log: "-o "
+  queue: " -q long.q"
+  scheduler: "qsub"
+
+###### Cluster parameters for ABySS rules ########
+ABySS_Launch:
+  mem: "-l mem_free=20G"
+
+###### Cluster parameters for hisat2_index rules ########
+hisat2_index :
+  mem: "-l mem_free=4G"
+  queue: " -q normal.q"
+
+###### Cluster parameters for hisats2_alignement rules ########
+hisat2_alignement:
+  mem: "-l mem_free=10G"
+
+
+###### Cluster parameters for samtools rules ########
+samtools :
+  mem: "-l mem_free=10G"
+
+
+ ###### Cluster parameters for merge_bam rules ########
+merge_bam :
+  mem: "-l mem_free=10G"
+
+
+###### Cluster parameters for sort_bam rules ########
+sort_bam :
+   mem: "-l mem_free=20G"
+
+
+###### Cluster parameters for bam2hints rules ########
+bam2hints :
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for bam2hints_filter rules ########
+bam2hints_filter :
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for exonerate rules ########
+exonerate :
+   mem: "-l mem_free=20G"
+
+
+###### Cluster parameters for merge_hint rules ########
+merge_hint:
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for BRAKER rules ########
+BRAKER :
+   mem: "-l mem_free=10G"
+
+
+###### Cluster parameters for augustus rules ########
+augustus :
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for merge_gff rules ########
+merge_gff :
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for createFasta rules ########
+createFasta:
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for recuperation_Stat rules ########
+recuperation_Stat:
+  mem: "-l mem_free=4G"
+
+
+###### Cluster parameters for report rules ########
+report:
+  mem: "-l mem_free=4G"
+

@@ -1,0 +1,9 @@
+
+{
+		"datadir"	: "/homedir/charriat/work/MagMax/2_Annotation/MagMax2/3_rename_masked/",
+		"OutDir"	: "/homedir/charriat/work/MagMax/2_Annotation/MagMax2/pipeline_output/",
+		"RnaSeqDir"	: "/homedir/charriat/data_flo/RNAseq/0_rawdata/rnaseq/",
+		"id_souche"	: "magnaporthe_oryzae",
+		"protRef"	: "/homedir/charriat/data_flo/Script/Cluster/Annotation_pipeline_v2/SupplementaryFile/OG_filter.fasta"
+}
+
