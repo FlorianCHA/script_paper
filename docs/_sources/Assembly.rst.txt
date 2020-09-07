@@ -9,6 +9,10 @@ ABYSS_launch
 
 This script does not directly launch ABySS but creates output directory and bash scripts to launch all assembly in parallel. This script is used on cirad HPC `link <https://bioinfo-agap.cirad.fr/>`_\ , so the environment (module load command) and sge submission works only on the cirad cluster. Please adapt this script to your machine or use the new pipeline which uses the singularity containers and configuration cluster file. 
 
+
+Mandatory installation
+~~~~~~~~~~~~~~~~~~~~~~
+
 - \ `ABySS <https://github.com/bcgsc/abyss>`_\ 
 - \ `Python >=3.7 <https://www.python.org/downloads/>`_\ 
 
@@ -26,7 +30,7 @@ Arguments take by ABYSS_launch
 
    ./ABYSS_launch.py -d /homedir/user/work/data/ -o /homedir/user/work/result/
 
-formatFastaName
+FormatFastaName
 ---------------
 
 The fomatFastaName.py is used to renamed correctly the scaffold of assembly in function of the length ( exemple : scaffold_1 is the longer scaffold et scaffold_2 the second more long) and filter scaffold in function of the length.

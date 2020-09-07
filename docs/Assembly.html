@@ -90,7 +90,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Assembly Script</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#abyss-launch">ABYSS_launch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#formatfastaname">formatFastaName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formatfastaname">FormatFastaName</a></li>
 </ul>
 </li>
 </ul>
@@ -190,10 +190,13 @@
 <div class="section" id="abyss-launch">
 <h2>ABYSS_launch<a class="headerlink" href="#abyss-launch" title="Permalink to this headline">¶</a></h2>
 <p>This script does not directly launch ABySS but creates output directory and bash scripts to launch all assembly in parallel. This script is used on cirad HPC <a class="reference external" href="https://bioinfo-agap.cirad.fr/">link</a>, so the environment (module load command) and sge submission works only on the cirad cluster. Please adapt this script to your machine or use the new pipeline which uses the singularity containers and configuration cluster file.</p>
+<div class="section" id="mandatory-installation">
+<h3>Mandatory installation<a class="headerlink" href="#mandatory-installation" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/bcgsc/abyss">ABySS</a></p></li>
 <li><p><a class="reference external" href="https://www.python.org/downloads/">Python &gt;=3.7</a></p></li>
 </ul>
+</div>
 <div class="section" id="arguments-take-by-abyss-launch">
 <h3>Arguments take by ABYSS_launch<a class="headerlink" href="#arguments-take-by-abyss-launch" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -208,10 +211,10 @@
 </div>
 </div>
 <div class="section" id="formatfastaname">
-<h2>formatFastaName<a class="headerlink" href="#formatfastaname" title="Permalink to this headline">¶</a></h2>
+<h2>FormatFastaName<a class="headerlink" href="#formatfastaname" title="Permalink to this headline">¶</a></h2>
 <p>The fomatFastaName.py is used to renamed correctly the scaffold of assembly in function of the length ( exemple : scaffold_1 is the longer scaffold et scaffold_2 the second more long) and filter scaffold in function of the length.</p>
-<div class="section" id="mandatory-installation">
-<h3>Mandatory installation<a class="headerlink" href="#mandatory-installation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Mandatory installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.python.org/downloads/">Python &gt;=3.7</a></p></li>
 </ul>
